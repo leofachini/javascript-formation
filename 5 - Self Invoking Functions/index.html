@@ -1,0 +1,37 @@
+<html>
+    <header>
+        <title>
+            5 - Self-invoking Functions
+        </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+        <link href="../default.css" rel="stylesheet"/>
+    </header>
+
+    <body style="display: flex; justify-content: center; align-items: center;">
+        <section class="exercise-explanation">
+            <h1>
+                5 - Self-invoking Functions
+            </h1>
+            <p>
+                Aside from the obivous, the self-invoking functions have a more noble purpose, which is to prevent us from mess with the global scope. Let's take a closer look!
+                <br />
+                <br />
+                <code class="language-javascript">(function() {
+    'use strict';
+    var myTest = 'This is a context test';
+})();</code>
+                <br />
+                <br />
+                See what happens at this time when we try to reach the <b>myTest</b> varuiable.
+                <br />
+                <span class="attention" style="margin-left: 0">
+                    Go ahead and test it on your console!
+                </span>
+            </p>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
