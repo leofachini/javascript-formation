@@ -1,0 +1,53 @@
+<html>
+    <header>
+        <title>
+            2 - Strict Mode
+        </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+        <link href="../default.css" rel="stylesheet"/>
+    </header>
+
+    <body style="display: flex; justify-content: center; align-items: center;">
+        <section class="exercise-explanation">
+            <h1>
+                2 - Strict Mode
+            </h1>
+            <p>
+                The <code class="language-javascript">"use strict"</code> defines that JavaScript code should be executed in "strict mode".
+                <br />
+                <br />
+                Tip: <span class="attention">The "use strict" directive is only recognized at the beginning of a script or a function.</span>
+                <br />
+                Tip 2: <a href="https://www.w3schools.com/js/js_strict.asp">Click here for more detailed info about the strict mode.</a> 
+                <br />
+                <br />
+                <b>What would happen if we run those snnipets bellow?</b>
+                <ul>
+                    <li>
+                        Undeclared variable assignment in <span class="attention">strict mode</span>
+                        <br />
+                        <br />
+                        <code class="language-javascript">'use strict';
+x = 'This is just a test';
+console.log(x);
+</code>
+                        <br />
+                    </li>
+                    <li>
+                        Undeclared variable assignment <b>not</b> in <span class="attention">strict mode</span>
+                        <br />
+                        <br />
+<code class="language-javascript">y = 'This is just another test';
+console.log(y);
+</code>
+                        <br />
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
