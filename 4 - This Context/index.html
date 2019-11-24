@@ -1,0 +1,40 @@
+<html>
+    <header>
+        <title>
+            4 - This context
+        </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+        <link href="../default.css" rel="stylesheet"/>
+    </header>
+
+    <body style="display: flex; justify-content: center; align-items: center;">
+        <section class="exercise-explanation">
+            <h1>
+                4 - This context
+            </h1>
+            <p>
+                The "this" in vanilla javascript on browser environment is just an alias for the <code class="language-javascript">window</code> variable.
+                <br />
+                <br />
+                Assuming this page already have this javascript code lodaded:
+                <br />
+                <br />
+                <code class="language-javascript">var myTest = 'This is a context test';</code>
+                <br />
+                <br />
+                Because of hoisting (recently learned) the <code class="language-javascript">var</code> is hoisted to the global space.
+                <br />
+                In other words, the variable <b>myTest</b> will be available on both places: <code class="language-javascript">this.myTest</code> and <code class="language-javascript">window.myTest</code>.
+                <br />
+                <br />
+                <span class="attention" style="margin-left: 0">
+                    Go ahead and test it on your console!
+                </span>
+            </p>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
