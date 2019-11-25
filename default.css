@@ -1,0 +1,14 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+code {
+    white-space: pre-wrap !important;
+}
+
+.attention {
+    background-color: rgba(154, 25, 25, 0.1);
+    color: #9a1919;
+    margin-left: 5px;
+    padding: 2px;
+}

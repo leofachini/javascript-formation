@@ -1,0 +1,73 @@
+<html>
+    <header>
+        <title>
+            6 - Arrow Functions
+        </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+        <link href="../default.css" rel="stylesheet"/>
+    </header>
+
+    <body style="display: flex; justify-content: center; align-items: center;">
+        <section class="exercise-explanation">
+            <h1>
+                6 - Arrow Functions
+            </h1>
+            <p>
+                Now we will start to test <a href="https://github.com/lukehoban/es6features#arrows">arrow functions</a>.
+                <br />
+                <br />
+                <code class="language-javascript">const countries = ['Portugal', 'Brasil', 'Estados Unidos da América', 'México'];
+// Let's say we want to create a function that returns the amount of characters of each country name.
+// es5
+countries.map(function(country) {
+    return country.length;
+});
+// es6 with arrow functions
+countries.map((country) => {
+    return country.length;
+});             
+// es6 with reduced sintax on arrow function 
+countries.map(country) => country.length);             
+</code>
+                <br />
+                <br />
+                Nonetheless, when we are dealing with arrows functions we must be aware of the <b>lexical scope/context</b>.
+                <br />
+                <br />
+                "In classic function expressions, the this keyword is bound to different values based on the context in which the
+                <br />
+                function is called. Whereas arrow functions use the value of this in their lexical scope. This leads to very different behaviour."
+                <br />
+                <br />
+                <code class="language-javascript">// Example of a problem
+let obj = {
+    myVar: 'foo',
+    myFunc: function() { 
+        console.log(this.myVar);    
+        setTimeout(function() {
+            console.log(this.myVar);
+        }, 1000)
+    }
+};
+obj.myFunc() // foo ... then... undefined</code>
+                <br />
+                <br />
+                <code class="language-javascript">// How to fix the problem using lexical context from arrow function
+let obj = {
+    myVar: 'foo',
+    myFunc: function() { 
+        console.log(this.myVar);
+        setTimeout(() => {
+            console.log(this.myVar);
+        }, 1000)
+    }
+}
+obj.myFunc() // foo ... then... foo</code>
+            </p>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
